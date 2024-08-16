@@ -1,0 +1,162 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{makeidx}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{pst-plot}
+\usepackage{enumitem}
+\usepackage[top= 0.1in, bottom=.1in, left=1in, right=1in, paperwidth=8.5 in, paperheight=11 in]{geometry}
+\usepackage{multicol}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+
+\author{Joohwan Lee}
+\title{\underline{Take Home 2}{\tiny {\bf (Due June 21st)}}}
+\date{}
+
+\begin{document}
+\makeatletter
+\renewcommand{\@maketitle}{
+\newpage
+ \null
+ \vskip 2em%
+ \begin{center}%
+  {\LARGE \@title \par}%
+ \end{center}%
+ \par} \makeatother
+\maketitle
+
+
+\begin{itemize}[noitemsep]
+\item You may get assistance from tutors.
+\item {\bf Late work will not be accepted.}
+\item {\bf All answers and work must be on seperate sheets of paper.}
+\item {\bf Keep work organized.}  Answer that are hard to find illegible work will be awarded no points.
+\item Answers without justification will be awarded no points.
+\item You may verify your answers with a calculator, but {\bf all calculations must be done by hand.}
+\item Answers that look similar to another students work will be judged harshly.
+\end{itemize}
+
+
+\begin{enumerate}
+
+\item Predator-Prey system.  From the lecture last week we presented a predator-prey situation and based on some simple assumption, we made some educated choices for the constants $\alpha_1, \alpha_2, \beta_1$ and $\beta_2$.  So consider the system of differential equation given below
+
+
+$\displaystyle \left\{ \begin{array}{rcr}
+
+ \frac{dF}{dt}&=& \alpha_1 \cdot F + \beta_1 \cdot FR  \\
+& \\
+ \frac{dR}{dt}&=& \alpha_2 \cdot R + \beta_2 \cdot FR\\ 
+\end{array}
+\right.$ 
+
+where $\alpha_1= -0.5$, $\alpha_2 = 0.2$, $\beta_1 = 0.01$ and $\beta_2 = -0.005$.  $F$ represents the population of foxes, $R$ repressent the population of rabbits (both measured in hundreds).  For the consideration of the problem let us assume a closed system of only foxes and rabbits.  Let us consider the population of foxes displayed along the y-axis and the population of rabbits displayed along the x-axis.
+
+  \begin{enumerate}
+  
+\item Verbally describe what the quantity $\displaystyle \frac{dF}{dt}$ represents, where $t$ is time measured in years.
+
+\item Verbally describe what the quantity $\displaystyle \frac{dR}{dt}$ represents, where $t$ is time measured in years.
+
+  \item Create the quantity $\displaystyle \frac{dF}{dR}$ and describe what the quantity represents verbally.
+  
+  
+  \item Sketch a slope field at the indicated points.  \textbf{Explain} what is happening to the population of the foxes and rabbits at the indicated points.  (i.e. are there too many foxes or not enough rabbits).  Emphasis on point $A$.
+  
+
+  
+ \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.058823529411764705cm,y=0.07692307692307693cm]
+\draw [color=cqcqcq,, xstep=0.5882352941176471cm,ystep=0.7692307692307693cm] (-10.,-10.) grid (160.,120.);
+\draw[->,color=black] (-10.,0.) -- (160.,0.);
+\foreach \x in {,20.,40.,60.,80.,100.,120.,140.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-10.) -- (0.,120.);
+\foreach \y in {,20.,40.,60.,80.,100.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-10.,-10.) rectangle (160.,120.);
+\begin{scriptsize}
+\draw [fill=ududff] (50.,40.) circle (2.5pt);
+\draw[color=ududff] (63.94928010987046,46.68533827537665) node {$A = (50, 40)$};
+\draw [fill=ududff] (20.,20.) circle (2.5pt);
+\draw[color=ududff] (34.01454913556904,26.61145985731568) node {$B = (20, 20)$};
+\draw [fill=ududff] (60.,10.) circle (2.5pt);
+\draw[color=ududff] (74.16230597169094,16.39843399549519) node {$C = (60, 10)$};
+\draw [fill=ududff] (110.,30.) circle (2.5pt);
+\draw[color=ududff] (125.22743528079337,36.47231241355615) node {$D = (110, 30)$};
+\draw [fill=ududff] (90.,70.) circle (2.5pt);
+\draw[color=ududff] (104.09703694599237,76.62006924967808) node {$E = (90, 70)$};
+\draw [fill=ududff] (60.,90.) circle (2.5pt);
+\draw[color=ududff] (74.16230597169094,96.34177436215903) node {$F = (60, 90)$};
+\draw [fill=ududff] (30.,70.) circle (2.5pt);
+\draw[color=ududff] (44.227574997389524,76.62006924967808) node {$G = (30, 70)$};
+\end{scriptsize}
+\end{tikzpicture}
+
+
+    
+      
+        \end{enumerate}  
+
+
+\newpage
+ \phantom{}
+\vspace{0.5 in}
+
+
+\item  My Tesla model Y performance.  Now that we have seen the application of the least-squares regression line in action, lets put it to the test.  Here are more data (data is plural).
+
+
+\begin{tabular}{c|c|c|c|c}
+
+May 6th, 2024  & May 8th, 2024 & May 13th, 2024 & May 15th, 2024 & May 17th, 2024 \\
+\hline
+(0,51)  & (0,32) & (0,12) &(0,36) & (0,?)\\
+(12,70) & (7,50) & (6,33)& (7,51)& (6,?)\\
+(20,81) & (15,66) & (13, 52)& (18,72)&(11,?)\\
+(28,90) & (20,75) & (18,62)&(31,90)& (17,?)\\
+ & (30,88) & (29,78) && (23,?)\\
+&(32,90) & (35,85) &&\\
+& & (40,90)&&
+\end{tabular}\\
+
+Yes, the 2 component of the ordered pair for May 17th is missing, but we will fill in the details using the least-squares regression line.  Taking the values from May 15th, 2024 (only the values from this day) \textbf{construct a least-square regression line, with the following set of equations shown in class}.\\
+
+
+$ \left\{ \begin{array}{ll}
+
+ nb + (\sum x) m = \sum y & \\
+& \\
+(\sum x) b + (\sum x^2 ) m = \sum xy & 
+\end{array}
+\right.$ \\
+
+\textbf{To add a bit of description and context, use $B(t)$ to represent the percent of the battery full (dependent variable) given some time $t$ (independent variable), where $t$ is measured in minutes after the Tesla has started charging}. \textbf{ Using the function fill in the missing values of May 17th, 2024}.  \textbf{Using the function, show what the values of the percent of the battery full would be using the time for May 6th, 2024.}  \textbf{Describe the strenghts and weakness of your model (least-squares regression line}.
+
+
+
+\end{enumerate}
+
+
+
+\begin{center}
+\begin{large}
+
+\textbf{REMEMBER NO CALCULATORS, SHOW WORK!!!}
+
+\end{large}
+\end{center}
+
+
+
+
+\end{document}

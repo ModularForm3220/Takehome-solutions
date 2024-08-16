@@ -1,0 +1,90 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{makeidx}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{pst-plot}
+\usepackage{enumitem}
+\usepackage[top= 0.1in, bottom=.1in, left=1in, right=1in, paperwidth=8.5 in, paperheight=11 in]{geometry}
+\usepackage{multicol}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+
+\author{Joohwan Lee}
+\title{\underline{Take Home 1}{\tiny {\bf (Due June 13th)}}}
+\date{}
+
+\begin{document}
+\makeatletter
+\renewcommand{\@maketitle}{
+\newpage
+ \null
+ \vskip 2em%
+ \begin{center}%
+  {\LARGE \@title \par}%
+ \end{center}%
+ \par} \makeatother
+\maketitle
+
+
+\begin{itemize}[noitemsep]
+\item You may get assistance from tutors.
+\item {\bf Late work will not be accepted.}
+\item {\bf All answers and work must be on seperate sheets of paper.}
+\item {\bf Keep work organized.}  Answer that are hard to find illegible work will be awarded no points.
+\item Answers without justification will be awarded no points.
+\item You may verify your answers with a calculator, but {\bf all calculations must be done by hand.}
+\item Answers that look similar to another students work will be judged harshly.
+\end{itemize}
+
+
+\begin{enumerate}
+
+\item Evaluate the following.
+
+$\displaystyle \int \; \frac{x e^x - e^x}{x^2} \; dx$
+\item Find an approximate value for $\displaystyle \sqrt{2024}$.  Round your answer to the nearest thousandths. 
+ 
+\item The half-life of thorium-227 is approximately 18 days.  Suppose a researcher has a 10-gram sample of thorium-227.  The amount $A(t)$ (in grams) of thorium-227 after $t$ days is given by 
+
+$$A(t)=10 \cdot \left( \frac{1}{2} \right)^{t/18}  \qquad \text{or} \qquad A(t)=10 \cdot e^{(-t \ln2)/18}$$
+
+ {\bf all calculations must be done by hand}, you may use the table to values.
+
+\textbf{How long} will it take until 8 grams of thorium-227 is left in the sample?  In your work you should keep values rounded to the hundredths place.  Your final answer rounded to the nearest tenths.  \textbf{How many} grams of thorium-227 is left in the sample after 12 days?   In your work you should keep values rounded to the hundredths place.  Your final answer rounded to the nearest tenths.
+
+\item  Write out the McLaurin series of the function $\displaystyle  \ln(1+x)$.  Use the power series and properties of logarithms to approximate $\displaystyle \ln \frac{1}{2}$ to the nearest hundredths, and show the approximation is within 0.01 of the exact value.  Please show your work.
+
+\begin{multicols}{2}
+\item  My Tesla model Y performance.  I am a disappointed owner of a Tesla model Y, why you ask it is because I purchase the the car right before that person who shall not be named decided hey why not lower the price of the Tesla cars and just burn tens of thousands of dollars.  Not to be clear I enjoy driving the car but everytime I drive the car I can only think 'my god' the horror.  But lets get to the math, Tesla are EV (electric vehicles) and need to be charged every so often.  For this semester we will try to model an expression for how the battery in the Tesla (my model Y specifically) will charge based on data and mathematics.  Below are data, the date when the battery was charged with the ordered pair where the first component is the amount of time the battery has been charging for in minutes and the second component represents the percetange of the battery that is full (There is more data but for the first week this is enough).
+
+
+\begin{tabular}{c|c|c}
+
+May 6th, 2024  & May 8th, 2024 & May 13th, 2024  \\
+\hline
+(0,51)  & (0,32) & (0,12)  \\
+(12,70) & (7,50) & (6,33)\\
+(20,81) & (15,66) & (13, 52)\\
+(28,90) & (20,75) & (18,62)\\
+ & (30,88) & (29,78) \\
+&(32,90) & (35,85) \\
+& & (40,90)
+\end{tabular}\\
+
+\end{multicols}
+
+First let us consider how to make sense of the data.  Visualize the data set by \textbf{plotting each data point on a Cartesian plane, use the x-axis as the time axis and the y-axis as the percentage of the battery full axis}.  Can you establish any pattern the data?  \textbf{Write a couple of sentences that describes what you see}.  Let us try to make sense of the data with the one of the most elementary technique learned in your mathematics curriculum a line.  \textbf{Determine a model (linear function) that will express how much the battery is full after some given amount of time}.  ??? This should be confusing because a linear function is only determined by two instances and yet here we have many.  \textbf{Describe which two points you took and why to create your linear function, here I am only asking you to create the model use strictly SIMPLE algebra techniques}.  For consistency purpose let $B(t)$ represent the percentage of the battery that is full and let $t$ represent the time that the battery has been charging for measured in minutes.  Using the model that you created \textbf{how much of the battery is full after 10 minutes}?  \textbf{After 70 minutes, how much of the battery is full}?  \textbf{Describe the strenghts and weakness of your model}.\\
+
+
+\end{enumerate}
+
+
+
+\end{document}
